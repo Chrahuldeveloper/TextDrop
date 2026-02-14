@@ -32,8 +32,9 @@ window.addEventListener("load", () => {
   const hash = window.location.hash.slice(1);
   if(hash){
     editor.innerHTML = deCompress(hash);
+  }else{
+    editor.innerHTML = "Start writing"
   }
-  editor.innerHTML = "Start writing"
 
 });
 

@@ -2,15 +2,16 @@ import { deflate, inflate } from "https://cdn.skypack.dev/pako";
 
 const editor = document.querySelector('[contenteditable="true"]');
 
-if ("serviceWorker" in navigator) {
-  window.addEventListener("load", () => {
-    navigator.serviceWorker.register("/sw.js").then(() => {
-      console.log("sw reg done")
-    }).catch((err) => {
-      console.log(err, "reg not done")
-    })
-  })
-}
+
+// if ("serviceWorker" in navigator) {
+//   window.addEventListener("load", () => {
+//     navigator.serviceWorker.register("/sw.js").then(() => {
+//       console.log("sw reg done")
+//     }).catch((err) => {
+//       console.log(err, "reg not done")
+//     })
+//   })
+// }
 
 
 function deCompress(base64) {
@@ -29,7 +30,11 @@ function deCompress(base64) {
 
 window.addEventListener("load", () => {
   const hash = window.location.hash.slice(1);
-  editor.innerHTML = deCompress(hash);
+  if(hash){
+    editor.innerHTML = deCompress(hash);
+  }
+  editor.innerHTML = "Start writing"
+
 });
 
 function compress(text) {

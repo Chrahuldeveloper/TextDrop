@@ -3,15 +3,15 @@ import { deflate, inflate } from "https://cdn.skypack.dev/pako";
 const editor = document.querySelector('[contenteditable="true"]');
 
 
-// if ("serviceWorker" in navigator) {
-//   window.addEventListener("load", () => {
-//     navigator.serviceWorker.register("/sw.js").then(() => {
-//       console.log("sw reg done")
-//     }).catch((err) => {
-//       console.log(err, "reg not done")
-//     })
-//   })
-// }
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("/sw.js").then(() => {
+      console.log("sw reg done")
+    }).catch((err) => {
+      console.log(err, "reg not done")
+    })
+  })
+}
 
 
 function deCompress(base64) {

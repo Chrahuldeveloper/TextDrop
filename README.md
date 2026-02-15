@@ -1,6 +1,6 @@
 A simple web-based text editor that lets you write content and share it instantly via a compressed URL—no database, no backend, nothing to save. Your content lives entirely in the URL hash.
 
-Features
+# Features
 
 Live Writing – Type directly into the editor.
 
@@ -12,7 +12,7 @@ Persistent via URL – Open the shared URL, and your content is automatically lo
 
 Clean Interface – Minimal black-and-white editor with a subtle info footer.
 
-How It Works
+#  How It Works
 
 Type in the editor.
 
